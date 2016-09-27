@@ -98,14 +98,26 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\IRecipeModel.cs" />
+    <Compile Include="Models\RecipeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RecipeService\InMemoryRecipeStore.cs" />
+    <Compile Include="Services\RecipeService\IRecipeStore.cs" />
     <Compile Include="Services\SettingsServices\SettingsService.cs" />
+    <Compile Include="ViewModels\AddRecipeViewModel.cs" />
     <Compile Include="ViewModels\DesignTimeSettingsPageViewModel.cs" />
+    <Compile Include="ViewModels\IAddRecipeViewModel.cs" />
     <Compile Include="ViewModels\ISettingsPageViewModel.cs" />
     <Compile Include="ViewModels\ISettingsPartViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\DetailPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
+    <Compile Include="Views\AddRecipeView.xaml.cs">
+      <DependentUpon>AddRecipeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Busy.xaml.cs">
       <DependentUpon>Busy.xaml</DependentUpon>
     </Compile>
@@ -149,6 +161,14 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Views\AddRecipeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Busy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,7 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converters\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -9,6 +9,7 @@ namespace MealPlanner.Services.SettingsServices
     {
         public static SettingsService Instance { get; } = new SettingsService();
         Template10.Services.SettingsService.ISettingsHelper _helper;
+
         private SettingsService()
         {
             _helper = new Template10.Services.SettingsService.SettingsHelper();
